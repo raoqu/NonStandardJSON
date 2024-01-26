@@ -28,7 +28,10 @@ func (s *NJsonFormatListener) VisitTerminal(node antlr.TerminalNode) {
 
 // VisitErrorNode is called when an error node is visited.
 func (s *NJsonFormatListener) VisitErrorNode(node antlr.ErrorNode) {
-	s.output("VisitError - "+node.GetText(), 0)
+	token := node.GetSymbol()
+	line := token.GetLine()
+	column := token.GetColumn()
+	s.output(fmt.Sprintf("VisitErrorNode - ERROR %d,%d", line, column), 0)
 }
 
 // EnterEveryRule is called when any rule is entered.

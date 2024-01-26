@@ -1,4 +1,4 @@
-// Code generated from NJson.g4 by ANTLR 4.12.0. DO NOT EDIT.
+// Code generated from NJson.g4 by ANTLR 4.13.1. DO NOT EDIT.
 
 package parser // NJson
 

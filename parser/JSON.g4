@@ -1,9 +1,8 @@
 grammar NJson;
 
 json
- : object
- | array
- ;
+    : value EOF
+    ;
 
 object
     : '{' pair (',' pair)* '}'
